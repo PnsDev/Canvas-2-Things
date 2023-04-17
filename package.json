@@ -1,0 +1,42 @@
+{
+  "name": "canvas-2-things",
+  "version": "1.0.0",
+  "description": "An easy way to import all your canvas assignments into things 3",
+  "main": "src/index.ts",
+  "bin": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "cross-env NODE_ENV=prod node dist/index.js",
+    "dev": "cross-env NODE_ENV=dev TS_NODE=true NODE_OPTIONS=\"--loader ts-node/esm\" node . testing"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PnsDev/Canvas-2-Things.git"
+  },
+  "author": "PnsDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PnsDev/Canvas-2-Things/issues"
+  },
+  "homepage": "https://github.com/PnsDev/Canvas-2-Things#readme",
+  "dependencies": {
+    "async-exec": "^1.1.0",
+    "node-fetch": "^3.3.1",
+    "node-ical": "^0.16.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "cross-env": "^7.0.3",
+    "ts-node": "^10.9.1"
+  },
+  "pkg": {
+    "scripts": "dist/**/*.js",
+    "outputPath": "build",
+    "targets": [
+      "macos"
+    ],
+    "assets": [
+      "./node_modules/axios/dist/node/axios.cjs"
+    ]
+  }
+}
